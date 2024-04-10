@@ -13,7 +13,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: RecipeListPage(),
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Recipe App'),
+        ),
+        body: RecipeList(),
+      ),
     );
   }
 }

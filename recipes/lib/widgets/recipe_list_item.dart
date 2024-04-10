@@ -8,8 +8,8 @@ class RecipeListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(16),
+    return Card(
+      margin: EdgeInsets.all(6),
       child: Row(
         children: [
           Image.asset(recipe.imagePath, width: 100, height: 100, fit: BoxFit.cover),
@@ -17,15 +17,15 @@ class RecipeListItem extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(recipe.title, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-              SizedBox(height: 8),
-              Row(
-                children: [
-                  Icon(Icons.timer, size: 16),
-                  SizedBox(width: 4),
-                  Text(recipe.cookingTime),
-                ],
+              Text(
+                recipe.title, 
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold), 
+                overflow: TextOverflow.ellipsis, 
+                softWrap: true,
+                maxLines: 2,
               ),
+              const SizedBox(height: 4),
+              Text('Время готовки: ${recipe.cookingTime}'),
             ],
           ),
         ],
