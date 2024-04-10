@@ -9,13 +9,13 @@ class Recipe {
 
 List<Recipe> recipeList = [
   Recipe(
-    imagePath: 'assets/images/teriyaki.png',
+    imagePath: 'assets/images/teriyaki.jpeg',
     title: 'Salmon Teriyaki',
     cookingTime: '45 minutes',
     id: '1',
   ),
   Recipe(
-    imagePath: 'assets/images/tofu.png',
+    imagePath: 'assets/images/tofu.jpeg',
     title: 'Tofu Poke Bowl',
     cookingTime: '30 minutes',
     id: '2',
